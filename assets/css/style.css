@@ -1,0 +1,296 @@
+*{
+    box-sizing: border-box;
+    font-family: 'nino';
+}
+
+body{
+    margin:0px;
+    padding:0px;
+}
+a{
+    
+    text-decoration: none;
+    color:white;
+    
+}
+
+.box11 h2{
+    font-family: 'Bebas Neue', cursive;
+}
+.navbar{
+    position: fixed;
+    z-index: 99999;
+    width:100%;
+    min-height:100px;
+    display:flex;
+    align-items: center;
+    background-color: #044553;
+}
+.logo{
+    width:20%;
+    text-align: center;
+}
+.logo a{
+    font-size: 25px;
+    color: white;
+}
+.menu{
+    width:80%;
+    display:flex;
+    justify-content: space-around;
+    
+}
+.menuItem{
+    margin-right:5%;
+    position: relative;
+}
+.menuItem:hover .animationDiv{
+    display: block;
+}
+.animationDiv{
+    position:absolute;
+    border:1px solid rgb(117, 117, 117);
+    margin-top:5px;
+    width:0%;
+    display: none;
+    animation-name:menuAnimation ;
+    animation-duration: 200ms;
+    animation-fill-mode: forwards;
+   
+    
+}
+.header{
+    background-image: url(../images/329635271_527411076047104_983699276245728594_n.jpg);
+    background-size: 100% 100vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width:100%;
+}
+.box{
+    width:100%;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+.box1 , .box2{
+    width:50%;
+    color:white;    
+    display: flex;
+    justify-content: center;
+}
+.registration{
+    width:80%;
+    padding:40px;
+    text-align: center;
+    border:1px solid white;
+    border-radius: 15px;
+}
+
+input{
+    padding:5px;
+    margin-bottom:10px;
+    background-color: transparent;
+    outline:none;
+    border:1px solid white;
+    text-align: center;
+ 
+}
+::placeholder {
+    color: #ffffff;
+}
+.regbtn{
+    padding:5px 10px;
+    color:white;
+    border: 1px solid white;
+    background-color: transparent;
+    
+
+}
+.container{
+    padding: 20px;
+    width:80%;
+    margin:0px auto;
+    background-color:white;
+}
+.container h2{
+    margin-top:0px; 
+    text-align: left;
+
+}
+.content{
+    width: 100%;
+    display: flex;
+    
+    
+}
+.cont1{
+    width:50%;
+    
+}
+.cont1 img{
+    width:500px;
+    
+}
+.newsBox{
+    width:100%;
+    display: flex;
+    color: white;
+}
+.boxContent{
+    display:flex;
+}
+.card{
+    margin:10px;
+    padding: 5px;
+    height: 200px;
+}
+.card:nth-child(odd) {
+    background: #044553;
+}
+.card:nth-child(even) {
+    background:#152636;
+}
+.media{
+    display: flex;
+    align-items:center;
+    width:100%;
+}
+.videos , .table {
+    width:50%;
+}
+/* .videos{
+    display: flex;
+} */
+.iframe , .video , .audio{
+    width:100%;
+}
+.audio{
+    text-align: center;
+    margin-top:10px;
+}
+.iframe iframe , .video video{
+    width:100%;
+    height:315px;
+}
+.audio audio{
+    width:100%;
+}
+.table table{
+    width:95%;
+    margin:0px auto;
+    text-align:center;
+    border-collapse: collapse;
+    color: white;
+    height: 350px;
+}
+table tr, td {
+    padding:0px;
+}
+table tr{
+    border:2px solid white;
+}
+tr:nth-child(even) {background-color: #152636;}
+tr:nth-child(odd) {background-color: #044553;}
+
+.footer{
+    text-align: center;
+    padding:50px;
+    background-color: #152636;
+}
+
+.footer p {
+    text-align: center;
+    color: white;
+}
+p{
+    text-align: justify ;
+}
+@media screen and (max-width:930px) {
+    .newsBox{
+        flex-direction: column;
+    }
+    .iframe iframe , .video video{
+        height:215px;
+    }
+}
+@media screen and (max-width:768px) {
+    .content{
+        flex-direction: column-reverse;
+    }
+    .cont1{
+        width:100%;
+    }
+    .media{
+        flex-direction: column;
+    }
+    .table , .videos{
+        width:80%;
+        margin:0px auto;
+    }
+    .table{
+        margin-top:20px;
+    }
+}
+@media screen and (max-width:590px) {
+    .box1{
+        display:none;
+    }
+    .box2{
+        width:80%;
+        margin:0px auto;
+    }
+  
+
+}
+
+@media screen and (max-width:425px) {
+    .navbar{
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu , .logo{
+        width:100%;
+    }
+    .logo{
+        margin:15px;
+    }
+    .boxContent{
+        flex-direction: column;
+    }
+    .container{
+        width:100%;
+    }
+    .table, .media {
+        width:100%;
+    }
+    .table , .videos{
+        width:100%;
+        margin:0px auto;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .menu{
+        flex-direction: column;
+    }
+    .menuItem{
+        text-align: center;
+        margin:5px 0px;
+    }
+
+}
+
+
+
+
+@keyframes menuAnimation {
+    from{
+        width:0%;
+    }
+    to{
+        width:100%;
+    }
+}
